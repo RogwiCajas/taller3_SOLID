@@ -2,12 +2,14 @@
 
 #### 1.	Clases Helado y Pastel. Tienen mucha similitud, se debería crear una clase padre llamada Postre.
 ```
-Correcto, dado que Liskov Substitution Principle especifica que las clases derivables debería poder ser sustituidas por su clase padre.
+Correcto, dado que Liskov Substitution Principle especifica que las clases derivables debería 
+poder ser sustituidas por su clase padre.
 ```
 
 #### 2.	Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase OperacionesAderezo?. Se puede incluir dentro de postre un método para agregar un aderezo y para quitar un aderezo.
 ```
-No es necesaria, su presencia implica agregar nuevos metodos de aderezo cada vez que añada un postre. Lo cual Rompe el principio Open Closed.
+No es necesaria, su presencia implica agregar nuevos metodos de aderezo cada vez que añada un postre. 
+Lo cual Rompe el principio Open Closed.
 Moviendo los metodos a la clase Postre, cada postre nuevo puede sobrescribir los metodos segun sus necesidades.
 ```
 
@@ -18,7 +20,8 @@ Single Responsability Principle se aplica en este caso ya que resulta mejor sepa
 
 #### 4.	Enum Adicionales.Aderezo es muy estático, debe convertirse en clase abstract con un atributo nombre y un método abstracto setNombre para que cada tipo de aderezo sea una subclase de Aderezo e implemente dicho método. También, sobrescriba el método toString() en la clase Aderezo, para que devuelva el nombre del aderezo en mayúsculas.
 ```
-Al implemetar la clase abstracta respetamos el principio de Open Closed para extender de la clase Aderezo y las subclases son las que cambian su comportamiento pero no modifican la clase original. 
+Al implemetar la clase abstracta respetamos el principio de Open Closed para extender de la clase Aderezo y las subclases 
+son las que cambian su comportamiento pero no modifican la clase original. 
 ```
 
 
