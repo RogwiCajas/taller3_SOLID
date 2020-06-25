@@ -19,7 +19,7 @@ public class LecheDeslactosada extends LecheEntera {
     @Override
     public void usarPastel() {
         // Lanzar error No se puede usar en pastel
-        System.err.print("La leche deslactosada no se puede usar en pastel");
+        System.err.println("La leche deslactosada no se puede usar en pastel");
     }
         
 }

@@ -21,7 +21,6 @@ public class ManejadorDeLeche {
         System.out.println(postre.getClass());
         System.out.println(Pastel.class);
         if(postre.getClass().equals( Pastel.class)){
-            
             leche.usarPastel();
         }else{
             leche.usarHelado();
