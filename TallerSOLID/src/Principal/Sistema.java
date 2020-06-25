@@ -25,25 +25,28 @@ public class Sistema {
         ArrayList<Postre> arrPostres = new ArrayList<>();
         ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
         // Producir Helado
+        Postre helado_vainilla = new Helado("Vainilla");
+        arrPostres.add(helado_vainilla);
         
         // Producir Pastel
         Postre pastel_chocolate = new Pastel("Chocolate");
         arrPostres.add(pastel_chocolate);
         
-        Postre helado_vainilla = new Helado("Vainilla");
-        arrPostres.add(helado_vainilla);
         
         
-        for(Postre p : arrPostres){
+         for (Postre p : arrPostres) {
             System.out.println("------------");
             p.anadirAderezo(new crema());
             p.anadirAderezo(new frutillas());
             System.out.println(p);
-            
-            mnj_leche.cambiarTipoLeche(leche,p);
-           
+            try {
+                mnj_leche.cambiarTipoLeche(leche, p);
+
+            } catch (RuntimeException e) {
+                System.err.println(e.getMessage());
+            }
             ManejadorDePrecio mdp = new ManejadorDePrecio();
             System.out.println(mdp.showPrecioFinal(p));
-        }      
+        }
     }
 }
