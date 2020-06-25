@@ -4,7 +4,8 @@
     Correcto, dado que Liskov Substitution Principle especifica que las clases derivables debería poder ser sustituidas por su clase padre.
 
 ### 2.	Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase OperacionesAderezo?. Se puede incluir dentro de postre un método para agregar un aderezo y para quitar un aderezo.
-
+	No es necesaria, su presencia implica agregar nuevos metodos de aderezo cada vez que añada un postre. Lo cual Rompe el principio OPEN CLOSED.
+	Moviendo los metodos a la clase Postre, cada postre nuevo puede sobrescribir los metodos segun sus necesidades.
 
 ### 3.	Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados, deben estar en otra clase por si cambia la fórmula de cálculo. La clase nueva debe llamarse Procesos.ManejadorDePrecio.
     Single Responsability Principle se aplica en este caso ya que resulta mejor separar los métodos que alteran el precio.
