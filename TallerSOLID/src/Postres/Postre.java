@@ -57,7 +57,7 @@ public class Postre {
         aderezos.add(aderezo);
     }
     
-    public void quitarAderezp(Aderezo aderezo){
+    public void quitarAderezo(Aderezo aderezo){
         aderezos.remove(aderezo);
     }
     
