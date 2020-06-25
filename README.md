@@ -28,9 +28,9 @@ y las subclases son las que cambian su comportamiento pero no modifican la clase
 ### 5.	Paquete Leche y la clase Procesos.ManejadorDeLeche. En el main descomente las instrucciones para realizar el cambio del tipo de leche utilizada en cada postre, luego analice como solucionar el error generado en la clase Leche.LecheDeslactosada.
 
 ```
-Al implemetar la clase abstracta respetamos el principio de Open Closed para extender de la clase Leche Entera 
-usando también el principio de Liskov Substitution y teniendo diveros comportamientos sin modificar la clase 
-original para su posterior uso de preferencia por encima de las subclases. 
+Al implemetar la clase abstracta respetamos el principio de Open Closed para extender de la clase Leche 
+Entera usando también el principio de Liskov Substitution y teniendo diveros comportamientos sin 
+modificar la clase original para su posterior uso de preferencia por encima de las subclases. 
 
 ```
 
