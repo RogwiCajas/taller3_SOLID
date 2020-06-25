@@ -7,19 +7,16 @@ package Adicionales;
 
 /**
  *
- * @author Pedro Mendoza
+ * @author DANIEL SANCHEZ
  */
-public abstract class Aderezo {
-    public String nombre;
-
-    public String getNombre() {
-        return nombre;
-    }
-
-   public abstract void setNombre();
-    @Override
-    public String toString() {
-        return this.nombre.toUpperCase();
+public class frutillas extends Aderezo {
+    
+      @Override
+    public void setNombre() {
+        this.nombre ="frutillas";
     }
     
+     public String toString() {
+        return this.nombre.toUpperCase();
+    }
 }
