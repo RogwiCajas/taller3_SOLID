@@ -34,7 +34,7 @@ public class Sistema {
         arrPostres.add(helado_vainilla);
         
         
-            for(Postre p : arrPostres){
+        for(Postre p : arrPostres){
             System.out.println("------------");
             p.anadirAderezo(new crema());
             p.anadirAderezo(new frutillas());
@@ -44,10 +44,6 @@ public class Sistema {
            
             ManejadorDePrecio mdp = new ManejadorDePrecio();
             System.out.println(mdp.showPrecioFinal(p));
-            
-           }
-               
-           
-          
-}
+        }      
+    }
 }
