@@ -12,14 +12,9 @@ package Adicionales;
 public abstract class Aderezo {
     public String nombre;
 
-    public String getNombre() {
-        return nombre;
-    }
-
-   public abstract void setNombre();
-    @Override
+    public abstract void setNombre();
+     
     public String toString() {
         return this.nombre.toUpperCase();
     }
-    
 }

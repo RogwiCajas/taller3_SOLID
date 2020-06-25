@@ -10,14 +10,6 @@ package Adicionales;
  * @author DANIEL SANCHEZ
  */
 public class crema extends Aderezo{
-    
-
-    
-     public String toString() {
-        return this.nombre.toUpperCase();
-    }
-
-
 
     @Override
     public void setNombre() {

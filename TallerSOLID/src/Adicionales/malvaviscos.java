@@ -11,12 +11,9 @@ package Adicionales;
  */
 public class malvaviscos extends Aderezo{
     
-      @Override
+    @Override
     public void setNombre() {
         this.nombre ="malvaviscos";
     }
     
-     public String toString() {
-        return this.nombre.toUpperCase();
-    }
 }
