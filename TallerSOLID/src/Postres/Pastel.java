@@ -17,6 +17,7 @@ public class Pastel extends Postre{
     
     public Pastel(String sabor){
         super(sabor);
+        setPrecioParcial(15.55);
     }
 
     @Override
