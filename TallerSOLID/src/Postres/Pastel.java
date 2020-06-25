@@ -17,6 +17,7 @@ public class Pastel extends Postre{
     
     public Pastel(String sabor){
         super(sabor);
+        
         setPrecioParcial(15.55);
     }
 
@@ -24,5 +25,10 @@ public class Pastel extends Postre{
     public String toString() {
         return "Pastel{" + "sabor=" + this.getSabor() + ", precioParcial=" + this.getPrecioParcial() + ", aderezos=" + this.getAderezos() + '}';
     }
-    
+
+    @Override
+    public double getPrecioParcial() {
+        return super.getPrecioParcial(); //To change body of generated methods, choose Tools | Templates.
+    }
+   
 }

@@ -5,9 +5,12 @@
  */
 package Principal;
 import Adicionales.Aderezo;
+import Adicionales.crema;
+import Adicionales.frutillas;
 import Postres.*;
 import Procesos.*;
 import Leche.*;
+import java.util.ArrayList;
 /**
  *
  * @author djurado
@@ -19,24 +22,30 @@ public class Sistema {
         // y cambiar el tipo de leche por Leche Descremada
         // Finalmente mostrar el precio final de cada uno
         LecheEntera leche = new LecheDeslactosada();
+        ArrayList<Postre> arrPostres = new ArrayList<>();
         ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
-        
         // Producir Helado
-        Helado helado_vainilla = new Helado("Vainilla");
-        OperacionesAderezo.anadirAderezoHelado(helado_vainilla, Aderezo.CREMA);
-        OperacionesAderezo.anadirAderezoHelado(helado_vainilla, Aderezo.FRUTILLA);
-        System.out.println(helado_vainilla);
-//        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
-        System.out.println(helado_vainilla.showPrecioFinal());
-        
+        Postre helado_vainilla = new Helado("Vainilla");
+        arrPostres.add(helado_vainilla);
         // Producir Pastel
-        Pastel pastel_chocolate = new Pastel("Chocolate");
-        OperacionesAderezo.quitarAderezoPastel(pastel_chocolate, Aderezo.CREMA);
-        OperacionesAderezo.anadirAderezoPastel(pastel_chocolate, Aderezo.FRUTILLA);
-        System.out.println(pastel_chocolate);
-//        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
-        System.out.println(helado_vainilla.showPrecioFinal());
+        Postre pastel_chocolate = new Pastel("Chocolate");
+        arrPostres.add(pastel_chocolate);
         
         
-    }
+            for(Postre p : arrPostres){
+            System.out.println("------------");
+            p.anadirAderezo(new crema());
+            p.anadirAderezo(new frutillas());
+            System.out.println(p);
+            
+            mnj_leche.cambiarTipoLeche(leche,p);
+           
+            ManejadorDePrecio mdp = new ManejadorDePrecio();
+            System.out.println(mdp.calcularPrecioFinal(p));
+            
+           }
+               
+           
+          
+}
 }

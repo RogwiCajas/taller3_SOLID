@@ -23,6 +23,11 @@ public class Helado extends Postre{
     public String toString() {
         return "Helado{" + "sabor=" + this.getSabor() + ", precioParcial=" + this.getPrecioParcial() + ", aderezos=" + this.getAderezos() + '}';
     }
+
+    @Override
+    public double getPrecioParcial() {
+        return super.getPrecioParcial(); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     

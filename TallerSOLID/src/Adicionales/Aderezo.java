@@ -14,6 +14,7 @@ public abstract class Aderezo {
 
     public abstract void setNombre();
      
+    @Override
     public String toString() {
         return this.nombre.toUpperCase();
     }

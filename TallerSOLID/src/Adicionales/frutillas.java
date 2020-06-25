@@ -10,9 +10,14 @@ package Adicionales;
  * @author DANIEL SANCHEZ
  */
 public class frutillas extends Aderezo {
-    
+    private String nombre;
     @Override
     public void setNombre() {
         this.nombre ="frutillas";
+    }
+       @Override
+    public String toString() {
+        setNombre();
+        return this.nombre.toUpperCase();
     }
 }

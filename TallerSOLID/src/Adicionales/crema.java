@@ -10,9 +10,16 @@ package Adicionales;
  * @author DANIEL SANCHEZ
  */
 public class crema extends Aderezo{
+    private String nombre;
 
     @Override
     public void setNombre() {
         this.nombre ="crema";
+    }
+         
+    @Override
+    public String toString() {
+        setNombre();
+        return this.nombre.toUpperCase();
     }
 }
